@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Emerald Springs - Private Resort in Calamba. Experience paradise with our top-notch amenities and facilities. Book your stay today!">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Emerald Springs</title>
     <link rel="icon" href="assets/img/Logo_Icon.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka0QIZ9QxGxkYRP5SH5q6kPEY0+5Unl/bblMj2+d32EV0ZkpSmNzDzqOfp2zYDBx" crossorigin="anonymous"></script>
-    <script src="javascript.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript.js"></script>
     <script src="https://kit.fontawesome.com/ba593dacd9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="nav_wrapper">
             <div class="nav_icons">
-                <a class="logo" href="#home"><img class="logo_icon" src="assets/img/Logo_Icon.png" alt="Emerald Springs logo icon"><span class="logo_text">EMERALD SPRINGS</span></a>
-                <span class="mb_menu"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i><span class="visually-hidden">Menu Icon</span></span>
+                <a class="logo" href="#home"><img class="logo_icon" src="assets\img\Logo_Icon.png"
+                        alt="Emerald Springs logo icon"><span class="logo_text">EMERALD SPRINGS</span></a>
+                <span class="mb_menu"><i class="fa-solid fa-bars fa-lg" alt="Menu Icon"></i></span>
             </div>
             <div class="nav_menu">
                 <nav>
@@ -35,7 +40,7 @@
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="navfoot_text" data-bs-toggle="modal" data-bs-target="#bookingModal"><input class="booking" type="button" value="Book Now"></a>
+                <a href="#" class="navfoot_text" id="openModalButton"><input class="booking" type="button" value="Book Now"></a>
             </div>
         </div>
     </header>
@@ -55,7 +60,10 @@
                                 <h3 class="subhead_text">About</h3>
                                 <h2 class="heading_text">EXPERIENCE PARADISE</h2>
                             </div>
-                            <p class="body_text">Located in the vibrant city of Calamba, Emerald Springs offers the perfect escape from the hustle and bustle of everyday life. With a beautiful view of Mt. Makiling, our resort is the ideal destination for those seeking relaxation and rejuvenation. Book your stay today and let us help you create lasting memories.</p>
+                            <p class="body_text">Located in the vibrant city of Calamba, Emerald Springs offers the perfect
+                                escape from the hustle and bustle of everyday life. With a beautiful view of Mt. Makiling,
+                                our resort is the ideal destination for those seeking relaxation and rejuvenation. Book your
+                                stay today and let us help you create lasting memories.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -76,7 +84,7 @@
                 <div class="row amenities_items g-5 slider">
                     <div class="col-lg-3">
                         <div class="icon_bg">
-                            <i class="amenities_icon fa-solid fa-wifi fa-xl" aria-hidden="true"></i><span class="visually-hidden">Wifi</span>
+                            <i class="amenities_icon fa-solid fa-wifi fa-xl" alt="icon"></i>
                         </div>
                         <p class="body_text icon_desc">Wifi</p>
                     </div>
@@ -87,27 +95,28 @@
                         <p class="body_text icon_desc">Pool Table</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-gamepad fa-xl" aria-hidden="true"></i><span class="visually-hidden">Gaming Console</span></div>
+                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-gamepad fa-xl" alt="icon"></i></div>
                         <p class="body_text icon_desc">Gaming Console</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-tv fa-xl" aria-hidden="true"></i><span class="visually-hidden">55-inch TV</span></div>
+                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-tv fa-xl" alt="icon"></i></div>
                         <p class="body_text icon_desc">55-inch TV</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-water-ladder fa-xl" aria-hidden="true"></i><span class="visually-hidden">Pool</span></div>
-                        <p class="body_text icon_desc">Pool</p>
+                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-water-ladder fa-xl" alt="icon"></i></div>
+                        <p class="body_text icon_desc ">Pool</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-fan fa-xl" aria-hidden="true"></i><span class="visually-hidden">Air Conditioner</span></div>
+                        <div class="icon_bg"> <i class="amenities_icon fa-solid fa-fan fa-xl" alt="icon"></i></div>
                         <p class="body_text icon_desc">Air Conditioner</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-square-parking fa-xl" aria-hidden="true"></i><span class="visually-hidden">Parking</span></div>
-                        <p class="body_text icon_desc">Parking</p>
+                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-square-parking fa-xl" alt="icon"></i>
+                        </div>
+                        <p class="body_text icon_desc ">Parking</p>
                     </div>
                     <div class="col-lg-3">
-                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-shower fa-xl" aria-hidden="true"></i><span class="visually-hidden">Outdoor Shower</span></div>
+                        <div class="icon_bg"><i class="amenities_icon fa-solid fa-shower fa-xl" alt="icon"></i></div>
                         <p class="body_text icon_desc">Outdoor Shower</p>
                     </div>
                 </div>
@@ -144,31 +153,32 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="gallery_wrapper">
-                            <button id="slide_left" type="button"><i class="fa-solid fa-angle-right fa-xxl fa-flip-horizontal" aria-hidden="true"></i><span class="visually-hidden">Previous</span></button>
+                            <button id="slide_left" type="button"><i
+                                    class="fa-solid fa-angle-right fa-xxl fa-flip-horizontal"></i></button>
                             <div id="gallery" class="slider">
-                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room1.jpg" alt="Room 1"></div>
-                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge1.jpg" alt="Lounge 1"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool1.jpg" alt="Pool 1"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen1.jpg" alt="Kitchen 1"></div>
-                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room2.jpg" alt="Room 2"></div>
-                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge2.jpg" alt="Lounge 2"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool2.jpg" alt="Pool 2"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen2.jpg" alt="Kitchen 2"></div>
-                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room3b.jpg" alt="Room 3"></div>
-                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge3.jpg" alt="Lounge 3"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool3.jpg" alt="Pool 3"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen3.jpg" alt="Kitchen 3"></div>
-                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room4.jpg" alt="Room 4"></div>
-                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge4.jpg" alt="Lounge 4"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool4.jpg" alt="Pool 4"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen4.jpg" alt="Kitchen 4"></div>
-                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge5.jpg" alt="Lounge 5"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool5.jpg" alt="Pool 5"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen5.jpg" alt="Kitchen 5"></div>
-                                <div class="gallery_item pool"><img src="assets/img/Pool/pool6.jpg" alt="Pool 6"></div>
-                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen6.jpg" alt="Kitchen 6"></div>
+                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room1.jpg"></div>
+                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge1.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool1.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen1.jpg"></div>
+                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room2.jpg"></div>
+                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge2.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool2.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen2.jpg"></div>
+                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room3b.jpg"></div>
+                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge3.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool3.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen3.jpg"></div>
+                                <div class="gallery_item rooms"><img src="assets/img/Rooms/room4.jpg"></div>
+                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge4.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool4.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen4.jpg"></div>
+                                <div class="gallery_item lounge"><img src="assets/img/Lounge/lounge5.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool5.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen5.jpg"></div>
+                                <div class="gallery_item pool"><img src="assets/img/Pool/pool6.jpg"></div>
+                                <div class="gallery_item kitchen"><img src="assets/img/Kitchen/kitchen6.jpg"></div>
                             </div>
-                            <button id="slide_right" type="button"><i class="fa-solid fa-angle-right fa-xxl" aria-hidden="true"></i><span class="visually-hidden">Next</span></button>
+                            <button id="slide_right" type="button"><i class=" fa-solid fa-angle-right fa-xxl"></i></button>
                         </div>
                     </div>
                 </div>
@@ -178,7 +188,10 @@
             <div class="section_wrapper">
                 <div class="row g-0">
                     <div id="googlemaps">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3868.2990262738085!2d121.1943903!3d14.1772561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd61736a7edbe7%3A0x3d6bf075fcb394d7!2sEmerald%20Springs%20Private%20Resort!5e0!3m2!1sen!2sph!4v1674021474035!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3868.2990262738085!2d121.1943903!3d14.1772561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd61736a7edbe7%3A0x3d6bf075fcb394d7!2sEmerald%20Springs%20Private%20Resort!5e0!3m2!1sen!2sph!4v1674021474035!5m2!1sen!2sph"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div id="contact_wrapper">
                         <form id="contact_form" action="#" method="post">
@@ -190,20 +203,24 @@
                                 <div class="name_wrapper">
                                     <div class="name_item">
                                         <label for="first_name" class="body_text form_label">First Name</label>
-                                        <input type="text" id="first_name" class="form-control w-100 body_text" placeholder="Juan">
+                                        <input type="text" id="first_name" class="form-control w-100 body_text"
+                                            placeholder="Juan" />
                                     </div>
                                     <div class="name_item">
                                         <label for="last_name" class="body_text form_label">Last Name</label>
-                                        <input type="text" id="last_name" class="form-control w-100 body_text" placeholder="Dela Cruz">
+                                        <input type="text" id="last_name" class="form-control w-100 body_text"
+                                            placeholder="Dela Cruz" />
                                     </div>
                                 </div>
                                 <div class="email_wrapper">
                                     <label for="email" class="body_text form_label">Email</label>
-                                    <input type="email" id="email" class="w-75 form-control body_text" placeholder="you@company.com">
+                                    <input type="email" id="email" class="w-75 form-control body_text"
+                                        placeholder="you@company.com" />
                                 </div>
                                 <div class="number_wrapper">
                                     <label for="number" class="body_text form_label">Phone Number</label>
-                                    <input type="tel" id="contact_number" class="w-50 form-control body_text" placeholder="09123456789" maxlength="11" minlength="11">
+                                    <input type="tel" id="contact_number" class="w-50 form-control body_text"
+                                        placeholder="09123456789" maxlength="11" minlength="11" />
                                 </div>
                                 <div class="message_wrapper">
                                     <label for="message" class="body_text form_label">Message</label>
@@ -214,266 +231,166 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>    
         </section>
     </main>
-    <footer>
-        <div class="footer_wrapper container-fluid">
-            <div class="section_wrapper">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-8 col-12">
-                        <div class="newsletter_wrapper">
-                            <div class="section_title">
-                                <h3 class="subhead_text">Join our News Letter</h3>
-                                <p class="body_text">Be updated for the latest updates, discounts and promos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-10">
-                        <form action="#" method="post">
-                            <fieldset class="nl_field">
-                                <input type="email" name="newsletter_email" id="nl_input" class="body_text form-control" placeholder="Enter your email">
-                                <input id="nl_btn" class="body_text form-control" type="button" value="Submit">
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <div class="row footer_nav">
-                    <div class="col-lg-5">
-                        <div class="icon_wrapper">
-                            <a class="footer_logo" href="#home">
-                                <img class="footer_icon" src="assets/img/Logo_Icon.png" alt="Emerald Springs logo icon">
-                                <span class="logo_text">
-                                    <h3 class="subhead_text">EMERALD SPRINGS</h3>
-                                    <p class="body_text">PRIVATE RESORT</p>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="footsec_wrapper">
-                            <p class="body_text link_title">Policies</p>
-                            <ul class="footer_links navfoot_text">
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Guest Rules</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footsec_wrapper">
-                            <p class="body_text link_title">Contacts</p>
-                            <ul class="footer_links navfoot_text">
-                                <li>
-                                    <i class="fa-solid fa-phone"></i> 09209576700
-                                </li>
-                                <li><a href="mailto:emeraldsprings@gmail.com">
-                                    <i class="fa-regular fa-envelope"></i> emeraldsprings@gmail.com</a>
-                                </li>
-                                <li><a href="#" id="emerald_add">
-                                    <i class="fa-solid fa-location-dot"></i> Block 1 Lot 2 Ecru St. Indigo Bay Bagong Kalsada Calamba, Laguna</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="footsec_wrapper">
-                            <p class="body_text link_title">Social Media</p>
-                            <ul class="footer_links navfoot_text">
-                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100063774560741"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                                </li>
-                            </ul>
+</body>
+<footer>
+    <div class="footer_wrapper container-fluid">
+        <div class="section_wrapper">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 col-12">
+                    <div class="newsletter_wrapper">
+                        <div class="section_title">
+                            <h3 class="subhead_text">Join our News Letter</h3>
+                            <p class="body_text">Be updated for the latest updates, discounts and promos</p>
                         </div>
                     </div>
                 </div>
-                <div class="row" id="copyright">
-                    <hr>
-                    <p class="navfoot_text">©2024 Emerald Springs | Created by Li Sevidal</p>
+                <div class="col-lg-4 col-10">
+                    <form action="#" method="post">
+                        <fieldset class="nl_field">
+                            <input type="email" name="newsletter_email" id="nl_input" class="body_text form-control" placeholder="Enter your email" />
+                            <input id="nl_btn" class="body_text form-control" type="button" value="Submit">
+                        </fieldset>
+                    </form>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="row footer_nav">
+                <div class="col-lg-5">
+                    <div class="icon_wrapper">
+                        <a class="footer_logo" href="#home">
+                            <img class="footer_icon" src="assets\img\Logo_Icon.png"
+                            alt="Emerald Springs logo icon">
+                            <span class="logo_text">
+                                <h3 class="subhead_text">EMERALD SPRINGS</h3>  
+                                <p class="body_text">PRIVATE RESORT</p>  
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footsec_wrapper">
+                        <p class="body_text link_title">Policies</p>
+                        <ul class="footer_links navfoot_text">
+                            <li><a href="#">Privay Policy</a></li>
+                            <li><a href="#">Guest Rules</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footsec_wrapper">
+                        <p class="body_text link_title">Contacts</p>
+                        <ul class="footer_links navfoot_text">
+                            <li>
+                                <i class="fa-solid fa-phone"></i> 09123456789
+                            </li>
+                            <li><a href="#">
+                                <i class="fa-regular fa-envelope"></i> emeraldsprings@gmail.com</a>
+                            </li>
+                            <li><a href="#" id="emerald_add">
+                                <i class="fa-solid fa-location-dot"></i> Block 1 Lot 2 Ecru St. Indigo Bay Bagong Kalsada  Calamba, Laguna</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footsec_wrapper">
+                        <p class="body_text link_title">Social Media</p>
+                        <ul class="footer_links navfoot_text">
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100063774560741"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="copyright">
+                <hr>
+                <p class="navfoot_text">©2022 Emerald Springs | Created by Li Sevidal</p>
+            </div>
+        </div>    
+    </div>
+</footer>
+
 
     <!-- Booking Modal -->
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="bookingModalLabel">Request date & time</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <div id="calendar">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <button class="btn btn-outline-primary btn-sm" id="prevMonth">&lt;</button>
-                      <h5 id="currentMonth">July 2024</h5>
-                      <button class="btn btn-outline-primary btn-sm" id="nextMonth">&gt;</button>
-                    </div>
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Sun</th>
-                          <th>Mon</th>
-                          <th>Tue</th>
-                          <th>Wed</th>
-                          <th>Thu</th>
-                          <th>Fri</th>
-                          <th>Sat</th>
-                        </tr>
-                      </thead>
-                      <tbody id="calendarBody">
-                        <!-- Calendar dates will be generated here -->
-                      </tbody>
-                    </table>
-                  </div>
-                  <div id="timeSlots" class="d-flex flex-wrap">
-                    <!-- Time slots will be generated here -->
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn btn-primary w-100 mt-3" id="nextStep">Next</button>
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-bg fade-in">
+        <div class="modal-content p-6 slide-in max-w-lg w-full">
+            <div class="modal-header flex justify-between items-center">
+                <h5 class="text-xl font-medium">Request date & time</h5>
+                <button type="button" class="text-black close-modal" id="closeModalButton">&times;</button>
             </div>
-          </div>
+            <div class="modal-body mt-4">
+                <div class="container">
+                    <div class="calendar-container mb-4">
+                        <div class="flex justify-between items-center">
+                            <button class="btn-prev text-secondary-color" id="prevMonth">&lt;</button>
+                            <h5 id="currentMonth" class="text-lg">July 2024</h5>
+                            <button class="btn-next text-secondary-color" id="nextMonth">&gt;</button>
+                        </div>
+                        <table class="table-auto w-full mt-4">
+                            <thead>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarBody">
+                                <!-- Calendar dates will be generated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="timeSlots" class="flex flex-wrap">
+                        <!-- Time slots will be generated here -->
+                    </div>
+                </div>
+                <button type="button" class="btn w-full mt-4 py-2" id="nextStep">Next</button>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Review Request Modal -->
-    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="reviewModalLabel">Review request</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <h5>Emerald Springs Private Resort</h5>
-                  <p id="selectedDateTime">Date and time will be shown here</p>
-                  <form id="contactForm">
-                    <div class="mb-3">
-                      <label for="fullName" class="form-label">Full name</label>
-                      <input type="text" class="form-control" id="fullName" placeholder="Your name">
-                    </div>
-                    <div class="mb-3">
-                      <label for="phoneNumber" class="form-label">Phone number (optional)</label>
-                      <input type="tel" class="form-control" id="phoneNumber" placeholder="Your phone number">
-                    </div>
-                    <div class="mb-3">
-                      <label for="appointmentNotes" class="form-label">Appointment notes (optional)</label>
-                      <textarea class="form-control" id="appointmentNotes" rows="3"></textarea>
-                    </div>
-                  </form>
-                  <button type="button" class="btn btn-primary w-100 mt-3" id="requestAppointment">Request appointment</button>
-                </div>
-              </div>
+    <div id="reviewModal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-bg fade-in">
+        <div class="modal-content p-6 slide-in max-w-lg w-full">
+            <div class="modal-header flex justify-between items-center">
+                <h5 class="text-xl font-medium">Review request</h5>
+                <button type="button" class="text-black close-modal" id="closeReviewModalButton">&times;</button>
             </div>
-          </div>
+            <div class="modal-body mt-4">
+                <div class="container">
+                    <h5>Emerald Springs Private Resort</h5>
+                    <p id="selectedDateTime" class="mb-4">Date and time will be shown here</p>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="block text-sm font-medium text-gray-700">Full name</label>
+                            <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-main-color focus:border-main-color sm:text-sm" id="fullName" placeholder="Your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="block text-sm font-medium text-gray-700">Phone number (optional)</label>
+                            <input type="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-main-color focus:border-main-color sm:text-sm" id="phoneNumber" placeholder="Your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentNotes" class="block text-sm font-medium text-gray-700">Appointment notes (optional)</label>
+                            <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-main-color focus:border-main-color sm:text-sm" id="appointmentNotes" rows="3"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn w-full mt-4 py-2" id="requestAppointment">Request appointment</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-
-    <script>
-      $(document).ready(function() {
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December"];
-        
-        let selectedDate = new Date();
-        let selectedTime = '';
-
-        function renderCalendar(date) {
-          $('#currentMonth').text(`${monthNames[date.getMonth()]} ${date.getFullYear()}`);
-          const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-          const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-          
-          let calendarBody = '';
-          let day = firstDay.getDay();
-          
-          for (let i = 0; i < day; i++) {
-            calendarBody += '<td></td>';
-          }
-          
-          for (let i = 1; i <= lastDay.getDate(); i++) {
-            calendarBody += `<td class="calendar-date">${i}</td>`;
-            day++;
-            if (day % 7 === 0) {
-              calendarBody += '</tr><tr>';
-            }
-          }
-          
-          $('#calendarBody').html(`<tr>${calendarBody}</tr>`);
-        }
-
-        function renderTimeSlots() {
-          const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
-          let timeSlotsHtml = '';
-          timeSlots.forEach(time => {
-            timeSlotsHtml += `<button class="btn btn-outline-primary time-slot" data-time="${time}">${time}</button>`;
-          });
-          $('#timeSlots').html(timeSlotsHtml);
-        }
-
-        renderCalendar(selectedDate);
-        renderTimeSlots();
-
-        $('#prevMonth').click(function() {
-          selectedDate.setMonth(selectedDate.getMonth() - 1);
-          renderCalendar(selectedDate);
-        });
-
-        $('#nextMonth').click(function() {
-          selectedDate.setMonth(selectedDate.getMonth() + 1);
-          renderCalendar(selectedDate);
-        });
-
-        $(document).on('click', '.calendar-date', function() {
-          $('.calendar-date').removeClass('selected-date');
-          $(this).addClass('selected-date');
-          selectedDate.setDate($(this).text());
-        });
-
-        $(document).on('click', '.time-slot', function() {
-          $('.time-slot').removeClass('active');
-          $(this).addClass('active');
-          selectedTime = $(this).data('time');
-        });
-
-        $('#nextStep').click(function() {
-          if (selectedDate && selectedTime) {
-            $('#selectedDateTime').text(`Date: ${selectedDate.toDateString()}, Time: ${selectedTime}`);
-            $('#bookingModal').modal('hide');
-            $('#reviewModal').modal('show');
-          } else {
-            alert('Please select a date and time.');
-          }
-        });
-
-        $('#requestAppointment').click(function() {
-          const name = $('#fullName').val();
-          const phone = $('#phoneNumber').val();
-          const notes = $('#appointmentNotes').val();
-          
-          if (name) {
-            alert('Appointment requested successfully.');
-            $('#reviewModal').modal('hide');
-          } else {
-            alert('Please enter your name.');
-          }
-        });
-      });
-    </script>
-</body>
 
 </html>
