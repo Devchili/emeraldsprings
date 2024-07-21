@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka0QIZ9QxGxkYRP5SH5q6kPEY0+5Unl/bblMj2+d32EV0ZkpSmNzDzqOfp2zYDBx" crossorigin="anonymous"></script>
     <script src="javascript.js" defer></script>
     <script src="https://kit.fontawesome.com/ba593dacd9.js" crossorigin="anonymous"></script>
 </head>
@@ -34,7 +35,7 @@
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="navfoot_text"><input class="booking" type="button" value="Book Now"></a>
+                <a href="#" class="navfoot_text" data-bs-toggle="modal" data-bs-target="#bookingModal"><input class="booking" type="button" value="Book Now"></a>
             </div>
         </div>
     </header>
@@ -299,6 +300,180 @@
             </div>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookingModalLabel">Request date & time</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div id="calendar">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <button class="btn btn-outline-primary btn-sm" id="prevMonth">&lt;</button>
+                      <h5 id="currentMonth">July 2024</h5>
+                      <button class="btn btn-outline-primary btn-sm" id="nextMonth">&gt;</button>
+                    </div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Sun</th>
+                          <th>Mon</th>
+                          <th>Tue</th>
+                          <th>Wed</th>
+                          <th>Thu</th>
+                          <th>Fri</th>
+                          <th>Sat</th>
+                        </tr>
+                      </thead>
+                      <tbody id="calendarBody">
+                        <!-- Calendar dates will be generated here -->
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="timeSlots" class="d-flex flex-wrap">
+                    <!-- Time slots will be generated here -->
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary w-100 mt-3" id="nextStep">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Request Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reviewModalLabel">Review request</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h5>Emerald Springs Private Resort</h5>
+                  <p id="selectedDateTime">Date and time will be shown here</p>
+                  <form id="contactForm">
+                    <div class="mb-3">
+                      <label for="fullName" class="form-label">Full name</label>
+                      <input type="text" class="form-control" id="fullName" placeholder="Your name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="phoneNumber" class="form-label">Phone number (optional)</label>
+                      <input type="tel" class="form-control" id="phoneNumber" placeholder="Your phone number">
+                    </div>
+                    <div class="mb-3">
+                      <label for="appointmentNotes" class="form-label">Appointment notes (optional)</label>
+                      <textarea class="form-control" id="appointmentNotes" rows="3"></textarea>
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-primary w-100 mt-3" id="requestAppointment">Request appointment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"];
+        
+        let selectedDate = new Date();
+        let selectedTime = '';
+
+        function renderCalendar(date) {
+          $('#currentMonth').text(`${monthNames[date.getMonth()]} ${date.getFullYear()}`);
+          const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+          const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+          
+          let calendarBody = '';
+          let day = firstDay.getDay();
+          
+          for (let i = 0; i < day; i++) {
+            calendarBody += '<td></td>';
+          }
+          
+          for (let i = 1; i <= lastDay.getDate(); i++) {
+            calendarBody += `<td class="calendar-date">${i}</td>`;
+            day++;
+            if (day % 7 === 0) {
+              calendarBody += '</tr><tr>';
+            }
+          }
+          
+          $('#calendarBody').html(`<tr>${calendarBody}</tr>`);
+        }
+
+        function renderTimeSlots() {
+          const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
+          let timeSlotsHtml = '';
+          timeSlots.forEach(time => {
+            timeSlotsHtml += `<button class="btn btn-outline-primary time-slot" data-time="${time}">${time}</button>`;
+          });
+          $('#timeSlots').html(timeSlotsHtml);
+        }
+
+        renderCalendar(selectedDate);
+        renderTimeSlots();
+
+        $('#prevMonth').click(function() {
+          selectedDate.setMonth(selectedDate.getMonth() - 1);
+          renderCalendar(selectedDate);
+        });
+
+        $('#nextMonth').click(function() {
+          selectedDate.setMonth(selectedDate.getMonth() + 1);
+          renderCalendar(selectedDate);
+        });
+
+        $(document).on('click', '.calendar-date', function() {
+          $('.calendar-date').removeClass('selected-date');
+          $(this).addClass('selected-date');
+          selectedDate.setDate($(this).text());
+        });
+
+        $(document).on('click', '.time-slot', function() {
+          $('.time-slot').removeClass('active');
+          $(this).addClass('active');
+          selectedTime = $(this).data('time');
+        });
+
+        $('#nextStep').click(function() {
+          if (selectedDate && selectedTime) {
+            $('#selectedDateTime').text(`Date: ${selectedDate.toDateString()}, Time: ${selectedTime}`);
+            $('#bookingModal').modal('hide');
+            $('#reviewModal').modal('show');
+          } else {
+            alert('Please select a date and time.');
+          }
+        });
+
+        $('#requestAppointment').click(function() {
+          const name = $('#fullName').val();
+          const phone = $('#phoneNumber').val();
+          const notes = $('#appointmentNotes').val();
+          
+          if (name) {
+            alert('Appointment requested successfully.');
+            $('#reviewModal').modal('hide');
+          } else {
+            alert('Please enter your name.');
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>
