@@ -812,74 +812,116 @@ footer{
     
 
 }
-@media screen and (max-width:576px) {
-    .title_text{
+@media screen and (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .title_text {
         font-size: 1.563rem;
     }
-    .subhead_text{
+
+    .subhead_text {
         font-size: 0.875rem;
     }
-    .body_text{
+
+    .body_text {
         font-size: 0.75rem;
         line-height: 1rem;
         font-weight: 400;
     }
-    .heading_text{
+
+    .heading_text {
         font-size: 0.875rem;
         letter-spacing: 0.625rem;
         font-weight: 600;
-    
     }
-    .nav_wrapper{
-    margin: 0 1rem;
+
+    .nav_wrapper {
+        margin: 0 1rem;
     }
-    #home{
+
+    #home {
         background-position-y: 90%;
         height: 40vh;
     }
 
-    #about{
+    #about {
         top: -1.5rem;
     }
-    .section_wrapper{
+
+    .section_wrapper {
         margin: 2.5rem 1rem 0 1rem;
+        width: calc(100% - 2rem); /* Ensure full width minus margins */
     }
-    .desc{
+
+    .desc {
         row-gap: 0.625rem;
     }
-    .about_img img{
+
+    .about_img img {
         max-height: 6rem;
-        object-position: 0 45%;  
+        object-position: 0 45%;
+        width: 100%;
+        height: auto;
     }
 
-    .icon_bg{
+    .icon_bg {
         width: 3.2rem;
         height: 3.2rem;
-
-    }
-    .pool_table{
-        width: 1.5rem; 
-        height:1.5rem;
-    }
-    .amenities_items>div{
-        width: 4.375rem;
-        margin: 0.75rem;
     }
 
-    .slider{
+    .pool_table {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .amenities_items>div {
+        width: auto;
+        margin: 0.75rem auto; /* Center items and prevent overflow */
+    }
+
+    .slider {
+        width: 100%;
         margin: 0;
+        padding: 0 1rem; /* Ensure content stays within bounds */
     }
-    .select_btn input{
+
+    .select_btn input {
         width: 4rem;
-        height:auto;
+        height: auto;
         margin-right: 0.25rem;
     }
-    .gallery_item{
-        width:9.25rem;
-        height:10.708rem;
-        margin:0.25rem;        
+
+    .gallery_item {
+        width: calc(100% - 1rem); /* Full width minus margin */
+        height: auto;
+        margin: 0.5rem auto;
     }
-    #contact_form{
-        width: 95%;        
+
+    #contact_form {
+        width: 95%;
+        margin: 2.5rem 1.875rem;
     }
+
+    #contact_wrapper {
+        width: 100%;
+        padding: 0 1rem; /* Add padding to fit content within viewport */
+    }
+
+    .nav_links li {
+        width: auto;
+        margin: 0.5rem 0;
+    }
+
+    .newsletter_wrapper .section_title>* {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .icon_wrapper {
+        justify-content: center;
+    }
+}
 }
