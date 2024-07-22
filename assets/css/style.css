@@ -852,7 +852,7 @@ footer{
 
     .section_wrapper {
         margin: 2.5rem 1rem 0 1rem;
-        width: calc(100% - 2rem); /* Ensure full width minus margins */
+        width: 100%; /* Full width to prevent overflow */
     }
 
     .desc {
@@ -862,7 +862,7 @@ footer{
     .about_img img {
         max-height: 6rem;
         object-position: 0 45%;
-        width: 100%;
+        width: 100%; /* Ensure responsiveness */
         height: auto;
     }
 
@@ -877,8 +877,8 @@ footer{
     }
 
     .amenities_items>div {
-        width: auto;
-        margin: 0.75rem auto; /* Center items and prevent overflow */
+        width: 100%;
+        margin: 0.75rem 0; /* Center items and prevent overflow */
     }
 
     .slider {
@@ -894,9 +894,9 @@ footer{
     }
 
     .gallery_item {
-        width: calc(100% - 1rem); /* Full width minus margin */
+        width: 100%; /* Full width to prevent overflow */
         height: auto;
-        margin: 0.5rem auto;
+        margin: 0.5rem 0;
     }
 
     #contact_form {
@@ -923,5 +923,4 @@ footer{
     .icon_wrapper {
         justify-content: center;
     }
-}
 }
